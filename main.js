@@ -11,6 +11,7 @@ automatDishes = [
 let automatItemPrint = () => {
   automatDishes.forEach((item) => {
     console.log(item);
+    console.log("hello");
   });
 }
 
