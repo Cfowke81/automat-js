@@ -8,12 +8,21 @@ automatDishes = [
   'Pumpkin Pie',
   'Strawberry Shortcake'];
 
+let mainDiv = document.getElementById('main')
+
 let automatItemPrint = () => {
   automatDishes.forEach((item) => {
-    console.log(item);
-    console.log("hello");
+    let foodItem = document.createElement('div');
+    foodItem.className = 'food-item';
+    foodItem.innerHTML += item;
+
+    let mainDiv = document.getElementById('main');
+    mainDiv.appendChild(foodItem);
+
+    foodItem.addEventListener('click', () => {
+    foodItem.className += ' hidden';
+    });
   });
 }
 
-let mainDiv = document.getElementById('main')
-mainDiv.innerHTML = automatItemPrint
+automatItemPrint();
